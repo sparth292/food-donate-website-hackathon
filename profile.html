@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Food Donate</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Food <span class="green">Donate</span></h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="profile.html" class="active">Profile</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <main class="profile-page">
+        <section class="profile-section">
+            <div class="profile-card">
+                <h2>Profile</h2>
+                <div class="profile-info">
+                    <div class="info-group">
+                        <label>Name:</label>
+                        <span>John Doe</span>
+                    </div>
+                    <div class="info-group">
+                        <label>Email:</label>
+                        <span>john.doe@example.com</span>
+                    </div>
+                    <div class="info-group">
+                        <label>Gender:</label>
+                        <span>Male</span>
+                    </div>
+                    <button class="edit-btn">Edit</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="donations-section">
+            <h2>Your donations</h2>
+            <div class="table-container">
+                <table class="donations-table">
+                    <thead>
+                        <tr>
+                            <th>Food</th>
+                            <th>Quantity</th>
+                            <th>Date/Time</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Rice</td>
+                            <td>10 kg</td>
+                            <td>2024-02-20 10:30 AM</td>
+                            <td><span class="status-delivered">Delivered</span></td>
+                        </tr>
+                        <tr>
+                            <td>Vegetables</td>
+                            <td>5 kg</td>
+                            <td>2024-02-19 2:15 PM</td>
+                            <td><span class="status-pending">Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>Bread</td>
+                            <td>20 loaves</td>
+                            <td>2024-02-18 9:00 AM</td>
+                            <td><span class="status-delivered">Delivered</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section brand">
+                <h2>Food <span class="green">Donate</span></h2>
+                <p>The basic concept of this project Food Waste Management is to collect the excess/leftover food from donors such as hotels, restaurants, marriage halls, etc and distribute to the needy people.</p>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact</h3>
+                <div class="contact-info">
+                    <p>(+00) 0000 000 000</p>
+                    <p><a href="mailto:Fooddonate@gmail.com">Fooddonate@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="footer-section links">
+                <h2>Food <span class="green">Donate</span></h2>
+                <div class="footer-links">
+                    <a href="index.html">Home</a> 
+                    <a href="about.html">About</a> 
+                    <a href="#services">Services</a> 
+                    <a href="contact.html">Contact</a>
+                </div>
+                <p class="copyright">Food Donate © 2023</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

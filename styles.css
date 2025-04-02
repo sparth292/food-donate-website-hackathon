@@ -1,0 +1,559 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header styles */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: white;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.green {
+    color: #4CAF50;
+}
+
+/* Navigation styles */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.nav-links li a.active {
+    background: #000;
+    color: white;
+    border-radius: 20px;
+}
+
+.nav-links li a:hover:not(.active) {
+    color: #4CAF50;
+}
+
+.mobile-menu {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* Hero section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url('images/poorImage.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 1rem;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.donate-btn {
+    background: #48a33f;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.donate-btn:hover {
+    background: #1e5e20;
+}
+
+/* Our Works section */
+.our-works {
+    padding: 5rem 5%;
+    text-align: center;
+}
+
+.our-works h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.our-works p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 3rem;
+}
+
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.work-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.work-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Door Pickup section */
+.door-pickup {
+    background: #f9f9f9;
+    padding: 5rem 5%;
+    text-align: center;
+}
+
+.pickup-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.pickup-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.pickup-content p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.schedule-btn {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.schedule-btn:hover {
+    background: #45a049;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 3rem 5%;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section h3 {
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer-section p {
+    color: #ccc;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.footer-section.brand h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-section.brand .green {
+    color: #4CAF50;
+}
+
+.footer-links {
+    list-style: none;
+    margin-top: 0.5rem;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.footer-links a:hover {
+    color: #4CAF50;
+}
+
+.contact-info {
+    color: #ccc;
+}
+
+.contact-info a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #555;
+    color: #ccc;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .footer-section {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* About Page Styles */
+.about-page {
+    padding-top: 80px;
+}
+
+.welcome-section {
+    text-align: center;
+    padding: 8rem 1rem;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('images/aboutBackImg.jpg') center/cover;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-title {
+    font-size: 3.5rem;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.about-section {
+    padding: 4rem 5%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-section h2 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+    text-align: justify;
+}
+
+.demo-section {
+    padding: 4rem 5%;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.demo-section h2 {
+    margin-bottom: 2rem;
+}
+
+.video-container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Contact Page Styles */
+.contact-page {
+    padding-top: 80px;
+}
+
+.contact-hero {
+    height: 300px;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url('images/contactUsImage2.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-overlay h1 {
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.contact-form-section {
+    padding: 4rem 5%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.send-btn {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.send-btn:hover {
+    background: #45a049;
+}
+
+/* Profile Page Styles */
+.profile-page {
+    padding: 120px 5% 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.profile-card {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    margin-bottom: 3rem;
+}
+
+.profile-card h2 {
+    color: #333;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.profile-info {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.info-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.info-group label {
+    font-weight: 500;
+    color: #666;
+}
+
+.edit-btn {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 2rem auto 0;
+    transition: background 0.3s;
+}
+
+.edit-btn:hover {
+    background: #45a049;
+}
+
+.donations-section {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.donations-section h2 {
+    color: #333;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.table-container {
+    overflow-x: auto;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.donations-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.donations-table th,
+.donations-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.donations-table th {
+    background: #f5f5f5;
+    font-weight: 600;
+    color: #333;
+}
+
+.donations-table tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+.status-delivered {
+    color: #4CAF50;
+    font-weight: 500;
+}
+
+.status-pending {
+    color: #FFA000;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mobile-menu {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 70%;
+        background: white;
+        flex-direction: column;
+        padding-top: 80px;
+        box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 1rem 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .works-grid {
+        grid-template-columns: 1fr;
+    }
+} 
